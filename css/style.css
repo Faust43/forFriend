@@ -101,8 +101,7 @@ a {
     margin-left: 30px;
     margin-bottom: 5px; } }
 .main__content {
-  display: flex;
-  flex-wrap: wrap; }
+  display: flex; }
 .main__header {
   width: 360px;
   margin: 210px 0 0 150px; }
@@ -113,6 +112,8 @@ a {
     width: 400px; }
 
 @media (max-width: 1024px) and (min-width: 801px) {
+  .main__content {
+    flex-wrap: wrap; }
   .main__header {
     margin: 180px 0 0 54px; } }
 @media (max-width: 800px) and (min-width: 768px) {

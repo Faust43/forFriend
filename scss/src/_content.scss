@@ -1,7 +1,6 @@
 .main {
 	&__content {
 		display: flex;
-		flex-wrap: wrap;
 	}
 	&__header {
 		width: 360px;
@@ -16,8 +15,13 @@
 	}
 }
 @media (max-width: 1024px) and (min-width: 801px) {
-	.main__header {
-		margin: 180px 0 0 54px;
+	.main {
+		&__content {
+			flex-wrap: wrap;
+		}
+		&__header {
+			margin: 180px 0 0 54px;
+		}
 	}
 }
 @media (max-width: 800px) and (min-width: 768px) {
