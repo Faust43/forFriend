@@ -56,23 +56,33 @@ setClock(currentHoliday)
 const scrollItems = document.querySelectorAll('.price-list__row	')
 document.querySelectorAll('.price-list__button-left').forEach((elem, i) =>
 	elem.addEventListener('click', () => {
-		let offset = -Number(scrollItems[i].style.left.replace(/[^0-9]/g, ''))
+		let offset = -Number(scrollItems[i].style.left.replace(/[^0-9]/g, '')),
+			sizeOfBlock = scrollItems[i].childNodes[1].getBoundingClientRect()
 		if (scrollItems[i].childElementCount > 2) {
-			offset += 520
+			offset += sizeOfBlock.width + 20
 		}
 		if (offset > 20) {
-			offset = -500 - 520 * (scrollItems[i].childElementCount - 3)
+			offset =
+				-sizeOfBlock.width -
+				20 -
+				(sizeOfBlock.width + 20) * (scrollItems[i].childElementCount - 3)
 		}
 		scrollItems[i].style.left = offset + 'px'
 	})
 )
 document.querySelectorAll('.price-list__button-right').forEach((elem, i) =>
 	elem.addEventListener('click', () => {
-		let offset = -Number(scrollItems[i].style.left.replace(/[^0-9]/g, ''))
+		let offset = -Number(scrollItems[i].style.left.replace(/[^0-9]/g, '')),
+			sizeOfBlock = scrollItems[i].childNodes[1].getBoundingClientRect()
 		if (scrollItems[i].childElementCount > 2) {
-			offset -= 520
+			offset -= sizeOfBlock.width + 20
 		}
-		if (offset <= -500 - 520 * (scrollItems[i].childElementCount - 2)) {
+		if (
+			offset <=
+			-sizeOfBlock.width +
+				20 -
+				(sizeOfBlock.width + 20) * (scrollItems[i].childElementCount - 2)
+		) {
 			offset = 0
 		}
 		scrollItems[i].style.left = offset + 'px'
@@ -89,17 +99,17 @@ function goToElement(classOfElement) {
 		behavior: 'smooth',
 	})
 }
-document.querySelectorAll('.menu__item').forEach((el, i) =>
+document.querySelectorAll('.menu__item').forEach((el, i) => {
 	el.addEventListener('click', () => {
-		if (i === 0) {
+		if (i === 0 || i === 3) {
 			goToElement('main__price-list')
 		}
-		if (i === 1) {
+		if (i === 1 || i === 4) {
 			goToElement('main__contacts')
 		}
-		if (i === 2) {
+		if (i === 2 || i === 5) {
 			goToElement('main__about-us')
 		}
 	})
-)
+})
 //-------------------кнопки контактов---------------//

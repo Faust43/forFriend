@@ -16,3 +16,24 @@
 		}
 	}
 }
+@media (max-width: 1024px) and (min-width: 768px) {
+	.contacts__button {
+		font-size: 14px;
+	}
+}
+@media (max-width: 767px) {
+	.contacts {
+		&__buttons {
+			justify-content: center;
+			flex-wrap: wrap;
+			font-size: 10px;
+			margin: 10px;
+		}
+		&__button {
+			margin: 5px;
+			& + & {
+				margin-left: 0;
+			}
+		}
+	}
+}

@@ -24,3 +24,38 @@
 		}
 	}
 }
+@media (max-width: 1144px) and(min-width: 767px) {
+	.about-us__content {
+		flex-direction: column;
+		align-items: center;
+		p {
+			width: 744px;
+			border-radius: 60px 60px 0 0;
+		}
+		&_img {
+			display: flex;
+			justify-content: center;
+			width: 744px;
+			overflow: hidden;
+			border-radius: 0 0 60px 60px;
+		}
+	}
+}
+@media (max-width: 767px) {
+	.about-us__content {
+		margin: 10px 0;
+		flex-direction: column;
+		align-items: center;
+		p {
+			width: 370px;
+			border-radius: 60px 60px 0 0;
+		}
+		&_img {
+			display: flex;
+			justify-content: center;
+			width: 370px;
+			overflow: hidden;
+			border-radius: 0 0 60px 60px;
+		}
+	}
+}

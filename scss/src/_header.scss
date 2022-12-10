@@ -16,17 +16,32 @@
 		margin-left: 20px;
 	}
 	&__menu {
+		width: 300px;
 		display: flex;
 		align-items: center;
+		margin-right: 30px;
 	}
 }
 .menu {
 	&__row {
+		width: 100%;
 		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
 	}
 	&__item {
 		font-weight: 700;
-		margin: 0 30px;
 		cursor: pointer;
+	}
+}
+@media (max-width: 767px) {
+	.header {
+		height: 100px;
+		flex-direction: column;
+	}
+	.menu {
+		margin-left: 30px;
+		margin-bottom: 5px;
 	}
 }
