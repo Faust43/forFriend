@@ -1,0 +1,18 @@
+.main {
+	&__contacts {
+		margin: 50px 0 0 0;
+	}
+}
+.contacts {
+	width: 100%;
+	&__buttons {
+		display: flex;
+		justify-content: space-between;
+		margin: 50px;
+	}
+	&__button {
+		& + & {
+			margin-left: 60px;
+		}
+	}
+}

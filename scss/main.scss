@@ -1,0 +1,83 @@
+@import './base.scss';
+@import './src/header';
+@import './src/content';
+@import './src/holiday';
+@import './src/price-list';
+@import './src/contacts';
+@import './src/about-us';
+@import './src/footer';
+body {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-family: 'Oswald', sans-serif;
+	color: #eeeeee;
+	font-size: 22px;
+	font-weight: 600;
+	overflow-x: hidden;
+	background-color: #eee;
+}
+h1,
+h2 {
+	font-weight: 900;
+}
+.main {
+	position: relative;
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	background: url(./../img/snow.svg);
+	color: #292929;
+}
+
+.container {
+	max-width: 1366px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.title {
+	height: 60px;
+	background-color: #f6d002;
+	text-align: center;
+	font-weight: 700;
+	line-height: 60px;
+}
+.button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: none;
+	background-color: #f6d002;
+	padding: 10px 20px;
+}
+span {
+	display: inline;
+	background-color: #f6d002;
+	box-shadow: -5px 0 0#f6d002, 5px 0 0#f6d002;
+}
+.hide {
+	animation: hide 0.3s;
+}
+.show {
+	animation: show 0.3s;
+}
+@keyframes hide {
+	0% {
+		width: 100%;
+	}
+
+	100% {
+		width: 0%;
+	}
+}
+@keyframes show {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 100%;
+	}
+}
