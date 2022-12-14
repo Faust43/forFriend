@@ -66,16 +66,18 @@ a {
   height: 60px;
   display: flex;
   justify-content: space-between;
-  background: #016cf8;
+  background: #000000;
   position: relative; }
-  .header::before {
-    content: url("./../../img/header-logo-kek.png");
-    position: absolute;
-    left: 333px;
-    top: 12px; }
   .header__logo {
-    width: 330px;
+    display: flex;
+    align-items: center;
+    max-width: 390px;
+    height: 60px;
     margin-left: 20px; }
+    .header__logo img {
+      width: 60px; }
+      .header__logo img:last-child {
+        width: 330px; }
   .header__menu {
     width: 300px;
     display: flex;
@@ -96,6 +98,9 @@ a {
   .header {
     height: 100px;
     flex-direction: column; }
+    .header__logo img:last-child {
+      width: 250px;
+      height: 50px; }
 
   .menu {
     margin-left: 30px;
@@ -320,7 +325,7 @@ a {
     .about-us__content_img {
       display: flex;
       align-items: center;
-      background-color: #ffffff;
+      background-color: #000;
       border-radius: 0 60px 60px 0; }
 
 @media (max-width: 1144px) and (min-width: 767px) {
@@ -353,14 +358,18 @@ a {
 .footer {
   position: relative;
   width: 100%;
-  background-color: #26ca1d;
+  height: 250px;
+  background-color: #000;
   display: flex;
   align-items: center; }
   .footer__logo {
-    height: 150px;
-    margin: 10px 0; }
+    position: absolute;
+    left: -80px;
+    transform: rotate(-90deg);
+    width: 250px;
+    box-sizing: content-box; }
   .footer__menu {
-    margin-left: 200px;
+    margin-left: 300px;
     width: 120px; }
   .footer__designer {
     position: absolute;
@@ -368,15 +377,13 @@ a {
     right: 10px; }
 
 @media (max-width: 767px) {
-  .footer {
-    align-items: start; }
-    .footer__menu {
-      margin-top: 10px;
-      margin-left: 100px;
-      width: 120px; }
-    .footer__designer {
-      transform: scale(0.5);
-      right: -50px; } }
+  .footer__menu {
+    margin-top: 10px;
+    margin-left: 100px;
+    width: 120px; }
+  .footer__designer {
+    transform: scale(0.5);
+    right: -50px; } }
 body {
   position: relative;
   display: flex;
@@ -445,3 +452,5 @@ span {
     width: 0%; }
   100% {
     width: 100%; } }
+
+/*# sourceMappingURL=style.css.map */
